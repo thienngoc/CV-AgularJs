@@ -1,0 +1,48 @@
+[
+  {
+    "Avatar":"avatar.jpg",
+    "Background":"bg.jpg",
+    "Ten":"Huỳnh Kim Thiên Ngọc",
+    "MoTa":"Student at University of Science",
+    "QuocGia":"Ho Chi Minh - Viet Nam",
+    "CongViec":"Programing",
+    "Email":"hkthienngoc1@gmail.com",
+    "TruongHoc": "Studying about programing at University of Science",
+    "TomTat":"summary.jpg",
+    "KinhNghiem":"Experience.jpg",
+    "Project":"project.png",
+    "KiNang":"skill.jpg",
+    "GiaoDuc":"education.png"
+  },
+  {
+    "Summary1":"living in the city, my hobbies are listening to music, playing Hearthstone",
+    "Summary2":"Studying about Software Engineering",
+    "Summary3":"Category book is like reading about sports"
+  },
+
+
+  {
+    "Project1":"Mario2D",
+    "Project2":"Caro Online",
+    "Project3":"Location"
+  },
+  {
+    "Skill1":"Programing language: C, C++, C#, Java, HTMT CSS",
+    "Skill2":"IDE: Visual Studio 2012, Eclipse, Axure",
+    "Skill3":"Teamwork, English"
+  },
+  {
+    "Image1":"image1.png",
+    "Image2":"image2.png",
+    "Image3":"image3.jpg"
+  },
+
+  {"Experience": "unseasoned"
+  },
+
+  {
+    "Education":"University of Science, Ho Chi Minh City"
+  }
+
+
+]

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thiên Ngọc</title>
+<style>
+
+</style>
+</head>
+<script src="angular.min.js"></script>
+<body style ="background-color: silver">
+<div ng-app = "myApp" ng-controller = "myController">
+    <div style = "width: 900px; margin: 50px auto; background-color: white" >
+        <header style = "height: 300px; width: 900px; margin: 50px auto; background-color: white">
+
+            <img src = {{Data[0].Avatar}}  alt="Myavatar" style="float:left;width:200px;height:200px;margin:30px;"/>
+
+            <div>
+                <div style = "font-size: 30px; padding-top:25px">
+                    <b>{{Data[0].Ten}}</b>
+                </div>
+                <div style = "font-size: 25px; color:silver">
+                    {{Data[0].MoTa}}
+                </div>
+                <div style = "font-size: 20px; color: silver" >
+                    <b>{{Data[0].QuocGia}} | {{Data[0].CongViec}}</b>
+                </div>
+                <br>
+                <div style = "font-size: 15px; color:silver; display: inline">
+                    <b>Contact Info: </b>
+                </div>
+
+                <div style = "font-size: 15px; color:black; display: inline">
+                    <b>{{Data[0].Email}}</b>
+                </div>
+
+                <br>
+                <div style = "font-size: 15px; color:silver; display: inline">
+                    <b>Education: </b>
+                </div>
+
+                <div style = "font-size: 15px; color:black; display: inline">
+                    <b>{{Data[0].TruongHoc}}</b>
+                </div>
+
+            </div>
+        </header>
+        <div style ="clear:both"></div>
+        <div style="width: 1000px; height:30px; background-color:silver"></div>
+        <div style = "font-size:15px; height: 200px; width: 900px; margin: 100px auto; background-color: white; margin-top: 10px">
+            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">SUMMARY</div>
+            <hr style="border-top: 2px solid silver;">
+            <div>
+
+                <table cellspacing="20" >
+                    <tr style ="margin-left: 20px">
+                        <td>{{Data[1].Summary1}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Data[1].Summary2}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{{Data[1].Summary3}}</td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+        </div>
+
+
+        <div style="width: 1000px; height:30px; background-color:silver"></div>
+        <div style = "height: 300px; width: 900px; margin: 10px auto; background-color: white">
+            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">EXPERIENCE</div>
+            <hr style="border-top: 2px solid silver;">
+            <div>
+
+                <table cellspacing="20" >
+                    <tr style ="margin-left: 20px">
+                        <td>{{Data[5].Experience}}</td>
+                    </tr>
+
+
+                </table>
+            </div>
+
+        </div>
+
+        <div style="width: 1000px; height:30px; background-color:silver"></div>
+        <footer style = "height: 300px; width: 900px; margin: 10px auto; background-color: white">
+            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">PROJECT</div>
+            <hr style="border-top: 2px solid silver;">
+            <div>
+
+                <table cellpadding="20" >
+                    <tr style ="margin-left: 20px">
+                        <td>{{Data[2].Project1}}</td>
+                        <td><img src = {{Data[4].Image1}}/></td>
+                        <td>{{Data[2].Project2}}</td>
+                        <td><img src = {{Data[4].Image2}}/></td>
+                        <td>{{Data[2].Project3}}</td>
+                        <td><img src = {{Data[4].Image3}}/></td>
+                    </tr>
+                </table>
+            </div>
+        </footer>
+
+
+
+        <div style="width: 1000px; height:30px; background-color:silver"></div>
+        <div style = "height: 300px; width: 900px; margin: 10px auto; background-color: white">
+            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">SKILLS</div>
+            <hr style="border-top: 2px solid silver;">
+            <div>
+
+                <table cellspacing="20" >
+                    <tr style ="margin-left: 20px">
+                        <td>{{Data[3].Skill1}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Data[3].Skill2}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{{Data[3].Skill3}}</td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+
+
+
+        <div style="width: 1000px; height:30px; background-color:silver"></div>
+        <div style = "height: 300px; width: 900px; margin: 10px auto; background-color: white">
+            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">EDUCATION</div>
+            <hr style="border-top: 2px solid silver;">
+            <div>
+
+                <table cellspacing="20" >
+                    <tr style ="margin-left: 20px">
+                        <td>{{Data[6].Education}}</td>
+                    </tr>
+
+
+                </table>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myController', function($scope, $http) {
+        $http.get('data.json')
+                .success(function(response) {
+                    $scope.Data = response;
+                });
+    });
+</script>
+
+</body>
+</html>
