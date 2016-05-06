@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/default.css" type="text/css">
 	<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 	<script src="js/handle.js"></script>
 	<link href="css/xeditable.css" rel="stylesheet">
@@ -28,32 +27,28 @@
                     <a href="#" editable-text="Data[0].Ten">{{ Data[0].Ten || "empty" }}</a>
                 </div>
                 <div style = "font-size: 25px; color:silver">
-                    <a href="#" editable-text="Data[0].MoTa">{{ Data[0].MoTa || "empty" }}</a>
+                    <a style = "font-size: 25px; color:silver" href="#" editable-text="Data[0].MoTa">{{ Data[0].MoTa || "empty" }}</a>
                 </div>
                 <div style = "font-size: 20px; color: silver" >
-                   
+
                     <b>
-                    <a href="#" editable-text="Data[0].QuocGia">{{ Data[0].QuocGia || "empty" }}</a>
-                    <a href="#" editable-text="Data[0].CongViec">{{ Data[0].CongViec || "empty" }}</a>
+                    <a style = "font-size: 20px; color:silver" href="#" editable-text="Data[0].QuocGia">{{ Data[0].QuocGia || "empty" }}</a> |
+                    <a style = "font-size: 20px; color:silver" href="#" editable-text="Data[0].CongViec">{{ Data[0].CongViec || "empty" }}</a>
                     </b>
                 </div>
                 <br>
                 <div style = "font-size: 15px; color:silver; display: inline">
                     <b>Contact Info: </b>
                 </div>
+                <a href="#" style ="font-size: 15px; color:black; display: inline" editable-text="Data[0].Email">{{ Data[0].Email || "empty" }}</a>
 
-                <div style = "font-size: 15px; color:black; display: inline">
-                    <b>{{Data[0].Email}}</b>
-                </div>
 
                 <br>
                 <div style = "font-size: 15px; color:silver; display: inline">
                     <b>Education: </b>
                 </div>
+                <a href="#" style ="font-size: 15px; color:black; display: inline" editable-text="Data[0].TruongHoc">{{ Data[0].TruongHoc || "empty" }}</a>
 
-                <div style = "font-size: 15px; color:black; display: inline">
-                    <b>{{Data[0].TruongHoc}}</b>
-                </div>
 
             </div>
         </header>
@@ -62,21 +57,18 @@
         <div style = "font-size:15px; height: 200px; width: 900px; margin: 100px auto; background-color: white; margin-top: 10px">
             <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">SUMMARY</div>
             <hr style="border-top: 2px solid silver;">
-            <div>
-
-                <table cellspacing="20" >
-                    <tr style ="margin-left: 20px">
-                        <td>{{Data[1].Summary1}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{Data[1].Summary2}}</td>
-                    </tr>
-
-                    <tr>
-                        <td>{{Data[1].Summary3}}</td>
-                    </tr>
-
-                </table>
+            <div style ="padding-top: 15px;">
+                <ul style ="list-style: none; margin-left: -20px">
+                    <li style="margin-bottom: 30px">
+                        <a style ="color:black" href="#" editable-text="Data[1].Summary1">{{ Data[1].Summary1 || "empty" }}</a>
+                    </li>
+                    <li style="margin-bottom: 30px">
+                        <a style ="color:black" href="#" editable-text="Data[1].Summary2">{{ Data[1].Summary2 || "empty" }}</a>
+                    </li>
+                    <li>
+                        <a style ="color:black" href="#" editable-text="Data[1].Summary3">{{ Data[1].Summary3 || "empty" }}</a>
+                    </li>
+                </ul>
             </div>
 
 
@@ -87,15 +79,13 @@
         <div style = "height: 300px; width: 900px; margin: 10px auto; background-color: white">
             <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">EXPERIENCE</div>
             <hr style="border-top: 2px solid silver;">
-            <div>
+            <div style ="padding-top: 15px">
 
-                <table cellspacing="20" >
-                    <tr style ="margin-left: 20px">
-                        <td>{{Data[5].Experience}}</td>
-                    </tr>
-
-
-                </table>
+                <ul style = "list-style: none; margin-left: -20px">
+                    <li>
+                        <a style ="color:black" href="#" editable-text="Data[5].Experience">{{ Data[5].Experience || "empty" }}</a>
+                    </li>
+                </ul>
             </div>
 
         </div>
@@ -104,18 +94,20 @@
         <footer style = "height: 300px; width: 900px; margin: 10px auto; background-color: white">
             <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">PROJECT</div>
             <hr style="border-top: 2px solid silver;">
-            <div>
+            <div style ="padding-top: 15px">
 
-                <table cellpadding="20" >
-                    <tr style ="margin-left: 20px">
-                        <td>{{Data[2].Project1}}</td>
-                        <td><img src = {{Data[4].Image1}}/></td>
-                        <td>{{Data[2].Project2}}</td>
-                        <td><img src = {{Data[4].Image2}}/></td>
-                        <td>{{Data[2].Project3}}</td>
-                        <td><img src = {{Data[4].Image3}}/></td>
-                    </tr>
-                </table>
+                <ul style ="list-style: none; margin-left: -20px">
+                    <li style="margin-bottom: 30px">
+                        <a style ="color:black" href="#" editable-text="Data[2].Project1">{{ Data[2].Project1 || "empty" }}</a>
+                    </li>
+                    <li style="margin-bottom: 30px">
+                        <a style ="color:black" href="#" editable-text="Data[2].Project2">{{ Data[2].Project2 || "empty" }}</a>
+                    </li>
+                    <li>
+                        <a style ="color:black" href="#" editable-text="Data[2].Project3">{{ Data[2].Project3 || "empty" }}</a>
+                    </li>
+                </ul>
+
             </div>
         </footer>
 
@@ -127,19 +119,20 @@
             <hr style="border-top: 2px solid silver;">
             <div>
 
-                <table cellspacing="20" >
-                    <tr style ="margin-left: 20px">
-                        <td>{{Data[3].Skill1}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{Data[3].Skill2}}</td>
-                    </tr>
 
-                    <tr>
-                        <td>{{Data[3].Skill3}}</td>
-                    </tr>
+                <ul style ="list-style: none; margin-left: -20px">
+                    <li style="margin-bottom: 30px">
+                        <a style ="color:black" href="#" editable-text="Data[3].Skill1">{{ Data[3].Skill1 || "empty" }}</a>
+                    </li>
+                    <li style="margin-bottom: 30px">
+                        <a style ="color:black" href="#" editable-text="Data[3].Skill2">{{ Data[3].Skill2 || "empty" }}</a>
+                    </li>
+                    <li>
+                        <a style ="color:black" href="#" editable-text="Data[3].Skill3">{{ Data[3].Skill3 || "empty" }}</a>
+                    </li>
+                </ul>
 
-                </table>
+
             </div>
 
         </div>
@@ -152,13 +145,13 @@
             <hr style="border-top: 2px solid silver;">
             <div>
 
-                <table cellspacing="20" >
-                    <tr style ="margin-left: 20px">
-                        <td>{{Data[6].Education}}</td>
-                    </tr>
+                <ul style ="list-style: none; margin-left: -20px">
+                    <li style="margin-bottom: 30px">
+                        <a style ="color:black" href="#" editable-text="Data[6].Education">{{ Data[6].Education || "empty" }}</a>
+                    </li>
 
+                </ul>
 
-                </table>
             </div>
 
         </div>
