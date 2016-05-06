@@ -3,6 +3,7 @@
     "Avatar":"avatar.jpg",
     "Background":"bg.jpg",
     "Ten":"Huỳnh Kim Thiên Ngọc",
+    "NgaySinh": "22/10/1994",
     "MoTa":"Student at University of Science",
     "QuocGia":"Ho Chi Minh - Viet Nam",
     "CongViec":"Programing",
@@ -14,35 +15,39 @@
     "KiNang":"skill.jpg",
     "GiaoDuc":"education.png"
   },
-  {
-    "Summary1":"living in the city, my hobbies are listening to music, playing Hearthstone",
-    "Summary2":"Studying about Software Engineering",
-    "Summary3":"Category book is like reading about sports"
-  },
+  [
+	{"Summary":"living in the city, my hobbies are listening to music, playing Hearthstone"},
+    {"Summary":"Studying about Software Engineering"},
+    {"Summary":"Category book is like reading about sports"}
+  ],
+    
 
 
-  {
-    "Project1":"Mario2D",
-    "Project2":"Caro Online",
-    "Project3":"Location"
-  },
-  {
-    "Skill1":"Programing language: C, C++, C#, Java, HTMT CSS",
-    "Skill2":"IDE: Visual Studio 2012, Eclipse, Axure",
-    "Skill3":"Teamwork, English"
-  },
+[
+
+  {"Project":"Mario2D"},
+  {"Project":"Caro Online"},
+  {"Project":"Location"}
+
+],
+  [
+    {"Skill":"Programing language: C, C++, C#, Java, HTMT CSS"},
+    {"Skill":"IDE: Visual Studio 2012, Eclipse, Axure"},
+    {"Skill":"Teamwork, English"}
+  ],
+
   {
     "Image1":"image1.png",
     "Image2":"image2.png",
     "Image3":"image3.jpg"
   },
 
-  {"Experience": "is in the process of learning"
-  },
+  [{"Experience": "is in the process of learning"
+  }],
 
-  {
+  [{
     "Education":"University of Science at Ho Chi Minh City"
-  }
+  }]
 
 
 ]

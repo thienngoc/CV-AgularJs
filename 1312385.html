@@ -7,9 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-	<script src="js/handle.js"></script>
+	<script src="handle.js"></script>
 	<link href="css/xeditable.css" rel="stylesheet">
-	<script src="js/xeditable.js"></script>
+	<script src="xeditable.js"></script>
 <style>
 
 </style>
@@ -55,59 +55,58 @@
         <div style ="clear:both"></div>
         <div style="width: 1000px; height:30px; background-color:silver"></div>
         <div style = "font-size:15px; height: 200px; width: 900px; margin: 100px auto; background-color: white; margin-top: 10px">
-            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">SUMMARY</div>
-            <hr style="border-top: 2px solid silver;">
-            <div style ="padding-top: 15px;">
-                <ul style ="list-style: none; margin-left: -20px">
-                    <li style="margin-bottom: 30px">
-                        <a style ="color:black" href="#" editable-text="Data[1].Summary1">{{ Data[1].Summary1 || "empty" }}</a>
-                    </li>
-                    <li style="margin-bottom: 30px">
-                        <a style ="color:black" href="#" editable-text="Data[1].Summary2">{{ Data[1].Summary2 || "empty" }}</a>
-                    </li>
-                    <li>
-                        <a style ="color:black" href="#" editable-text="Data[1].Summary3">{{ Data[1].Summary3 || "empty" }}</a>
-                    </li>
-                </ul>
+            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">
+                SUMMARY
+                <form>
+                    <label>Information:</label>
+                    <input type="text" ng-model="summary" placeholder="INFORMATION" ng-required/>
+                    <input  type="button"  value="Save" ng-click="AddSummary()">
+                </form>
+                <hr style="border-top: 2px solid silver;">
+				</br>
+				<div ng-repeat="summary in Data[1]">
+					<a style ="color:black; font-size: 15px" href="#" editable-text="summary.Summary">{{ summary.Summary || "empty" }}</a>
+				</div>
             </div>
-
-
         </div>
 
 
         <div style="width: 1000px; height:30px; background-color:silver"></div>
         <div style = "height: 300px; width: 900px; margin: 10px auto; background-color: white">
-            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">EXPERIENCE</div>
-            <hr style="border-top: 2px solid silver;">
-            <div style ="padding-top: 15px">
+            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">
+                EXPERIENCE
+                <form>
+                    <label>Information:</label>
+                    <input type="text" ng-model="experience" ng-required/>
+                    <input  type="button"  value="Save" ng-click="AddExperience()">
+                </form>
 
-                <ul style = "list-style: none; margin-left: -20px">
-                    <li>
-                        <a style ="color:black" href="#" editable-text="Data[5].Experience">{{ Data[5].Experience || "empty" }}</a>
-                    </li>
-                </ul>
+                <hr style="border-top: 2px solid silver;">
+
+                </br>
+                <div ng-repeat="experience in Data[5]">
+                    <a style ="color:black; font-size: 15px" href="#" editable-text="experience.Experience">{{ experience.Experience|| "empty" }}</a>
+                </div>
             </div>
 
         </div>
 
         <div style="width: 1000px; height:30px; background-color:silver"></div>
         <footer style = "height: 300px; width: 900px; margin: 10px auto; background-color: white">
-            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">PROJECT</div>
-            <hr style="border-top: 2px solid silver;">
-            <div style ="padding-top: 15px">
+            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">
+                PROJECT
+                <form>
+                    <label>Information:</label>
+                    <input type="text" ng-model="project" ng-required/>
+                    <input  type="button"  value="Save" ng-click="AddProject()">
+                </form>
 
-                <ul style ="list-style: none; margin-left: -20px">
-                    <li style="margin-bottom: 30px">
-                        <a style ="color:black" href="#" editable-text="Data[2].Project1">{{ Data[2].Project1 || "empty" }}</a>
-                    </li>
-                    <li style="margin-bottom: 30px">
-                        <a style ="color:black" href="#" editable-text="Data[2].Project2">{{ Data[2].Project2 || "empty" }}</a>
-                    </li>
-                    <li>
-                        <a style ="color:black" href="#" editable-text="Data[2].Project3">{{ Data[2].Project3 || "empty" }}</a>
-                    </li>
-                </ul>
+                <hr style="border-top: 2px solid silver;">
 
+                </br>
+                <div ng-repeat="project in Data[2]">
+                    <a style ="color:black; font-size: 15px" href="#" editable-text="project.Project">{{ project.Project|| "empty" }}</a>
+                </div>
             </div>
         </footer>
 
@@ -115,25 +114,22 @@
 
         <div style="width: 1000px; height:30px; background-color:silver"></div>
         <div style = "height: 300px; width: 900px; margin: 10px auto; background-color: white">
-            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">SKILLS</div>
-            <hr style="border-top: 2px solid silver;">
-            <div>
+            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">
+                SKILLS
+                <form>
+                    <label>Information:</label>
+                    <input type="text" ng-model="skill" ng-required/>
+                    <input  type="button"  value="Save" ng-click="AddSkill()">
+                </form>
 
+                <hr style="border-top: 2px solid silver;">
 
-                <ul style ="list-style: none; margin-left: -20px">
-                    <li style="margin-bottom: 30px">
-                        <a style ="color:black" href="#" editable-text="Data[3].Skill1">{{ Data[3].Skill1 || "empty" }}</a>
-                    </li>
-                    <li style="margin-bottom: 30px">
-                        <a style ="color:black" href="#" editable-text="Data[3].Skill2">{{ Data[3].Skill2 || "empty" }}</a>
-                    </li>
-                    <li>
-                        <a style ="color:black" href="#" editable-text="Data[3].Skill3">{{ Data[3].Skill3 || "empty" }}</a>
-                    </li>
-                </ul>
-
-
+                </br>
+                <div ng-repeat="skill in Data[3]">
+                    <a style ="color:black; font-size: 15px" href="#" editable-text="skill.Skill">{{ skill.Skill|| "empty" }}</a>
+                </div>
             </div>
+            <hr style="border-top: 2px solid silver;">
 
         </div>
 
@@ -141,18 +137,22 @@
 
         <div style="width: 1000px; height:30px; background-color:silver"></div>
         <div style = "height: 300px; width: 900px; margin: 10px auto; background-color: white">
-            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">EDUCATION</div>
-            <hr style="border-top: 2px solid silver;">
-            <div>
+            <div style = "font-size: 20px; color: silver; padding-top: 15px;margin-left: 20px">
+                EDUCATION
+                <form>
+                    <label>Information:</label>
+                    <input type="text" ng-model="education" ng-required/>
+                    <input  type="button"  value="Save" ng-click="AddEducation()">
+                </form>
 
-                <ul style ="list-style: none; margin-left: -20px">
-                    <li style="margin-bottom: 30px">
-                        <a style ="color:black" href="#" editable-text="Data[6].Education">{{ Data[6].Education || "empty" }}</a>
-                    </li>
+                <hr style="border-top: 2px solid silver;">
 
-                </ul>
-
+                </br>
+                <div ng-repeat="education in Data[6]">
+                    <a style ="color:black; font-size: 15px" href="#" editable-text="education.Education">{{ education.Education|| "empty" }}</a>
+                </div>
             </div>
+            <hr style="border-top: 2px solid silver;">
 
         </div>
 
