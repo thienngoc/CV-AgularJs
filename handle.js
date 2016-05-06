@@ -5,7 +5,7 @@
 	app.controller('myController',function($scope,$http)
 	{
 		
-		$http.get('json/data.json').success(function(response)
+		$http.get('data.json').success(function(response)
 		{
 			$scope.Data=response;
 		});
