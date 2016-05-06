@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Thiên Ngọc</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/default.css" type="text/css">
+	<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="js/handle.js"></script>
+	<link href="css/xeditable.css" rel="stylesheet">
+	<script src="js/xeditable.js"></script>
 <style>
 
 </style>
@@ -17,13 +25,17 @@
 
             <div>
                 <div style = "font-size: 30px; padding-top:25px">
-                    <b>{{Data[0].Ten}}</b>
+                    <a href="#" editable-text="Data[0].Ten">{{ Data[0].Ten || "empty" }}</a>
                 </div>
                 <div style = "font-size: 25px; color:silver">
-                    {{Data[0].MoTa}}
+                    <a href="#" editable-text="Data[0].MoTa">{{ Data[0].MoTa || "empty" }}</a>
                 </div>
                 <div style = "font-size: 20px; color: silver" >
-                    <b>{{Data[0].QuocGia}} | {{Data[0].CongViec}}</b>
+                   
+                    <b>
+                    <a href="#" editable-text="Data[0].QuocGia">{{ Data[0].QuocGia || "empty" }}</a>
+                    <a href="#" editable-text="Data[0].CongViec">{{ Data[0].CongViec || "empty" }}</a>
+                    </b>
                 </div>
                 <br>
                 <div style = "font-size: 15px; color:silver; display: inline">
@@ -156,15 +168,6 @@
     </div>
 </div>
 
-<script>
-    var app = angular.module('myApp', []);
-    app.controller('myController', function($scope, $http) {
-        $http.get('data.json')
-                .success(function(response) {
-                    $scope.Data = response;
-                });
-    });
-</script>
 
 </body>
 </html>
